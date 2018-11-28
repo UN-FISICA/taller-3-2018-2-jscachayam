@@ -1,4 +1,6 @@
 def imprimir(a):
+    if type(a)=!tuple:
+        return a
     a[0].reverse()
     str1 = ''.join(str(e) for e in a[0])
     str2 = ''.join(str(e) for e in a[1])
