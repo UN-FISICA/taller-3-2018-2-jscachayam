@@ -1,5 +1,5 @@
 def imprimir(a):
-    if type(a)=!tuple:
+    if type(a)!=tuple:
         return a
     a[0].reverse()
     str1 = ''.join(str(e) for e in a[0])
@@ -173,7 +173,7 @@ def suma(a,b):
         
     while num3[0][1]==0 and len(num3[0])>2:
         num3[0].pop(1)
-    while num3[1][-1]==0 and len(num3[1])>1 :
+    while num3[1][-1]==0 and len(num3[1])>1:
         num3[1].pop(-1)
     num3[0].reverse()
     return num3
@@ -324,6 +324,10 @@ def division(a,b,decimales=101):
     b[0].insert(0,signb)
     a[0].reverse()
     b[0].reverse()
+    while resultado[0][1]==0 and len(resultado[0])>2:
+        resultado[0].pop(1)
+    while resultado[1][-1]==0 and len(resultado[1])>1:
+        resultado[1].pop(-1)
     resultado[0].reverse()
     return(resultado)
             
@@ -335,7 +339,7 @@ def comparacion(a,b):
 
 def pi():
     x=entero(0) 
-    for k in range(500000):
+    for k in range(50000):
         if k%2!=0:
             numerador=entero(-4)
         else:
@@ -348,3 +352,4 @@ def pi():
 
 if __name__ == "__main__":
     print(imprimir(pi()))
+    
